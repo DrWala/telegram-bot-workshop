@@ -28,7 +28,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 
-token = "1743148790:AAFRTmxhYTU3ic5zzjF1hdjEIf4mC52nq1A"
+token = "[YOUR TOKEN HERE]"
 
 
 # Define a few command handlers. These usually take the two arguments update and
@@ -37,7 +37,8 @@ token = "1743148790:AAFRTmxhYTU3ic5zzjF1hdjEIf4mC52nq1A"
 
 def start(update, context):
     """Send a message when the command /start is issued."""
-    update.message.reply_text('Hi!')
+    user = update.effective_user
+    update.message.reply_text(f'Hi {user.first_name} {user.last_name}!')
 
 
 def help(update, context):

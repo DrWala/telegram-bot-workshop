@@ -1,4 +1,5 @@
 import logging
+import math
 
 from telegram import Update, ForceReply
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
@@ -15,13 +16,10 @@ token = "[YOUR TOKEN HERE]"
 
 # Define a few command handlers. These usually take the two arguments update and
 # context.
-def start(update: Update, _: CallbackContext) -> None:
+def start(update: Update, _: CallbackContext) -> None:xw
     """Send a message when the command /start is issued."""
     user = update.effective_user
-    update.message.reply_markdown_v2(
-        fr'Hi {user.mention_markdown_v2()}\!',
-        reply_markup=ForceReply(selective=True),
-    )
+    update.message.reply_text(f'Hi {user.first_name} {user.last_name}!')
 
 
 def help_command(update: Update, _: CallbackContext) -> None:
