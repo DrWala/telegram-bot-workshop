@@ -1,8 +1,7 @@
 import logging
 import time
-
 import requests
-from telegram import bot
+
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 # Enable logging
@@ -21,7 +20,7 @@ def error(update, context):
 
 def manual_poll(updater):
     # Lets change this later
-    return None
+    pass
 
 
 def main():

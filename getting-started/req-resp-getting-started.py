@@ -16,7 +16,7 @@ token = "[YOUR TOKEN HERE]"
 
 # Define a few command handlers. These usually take the two arguments update and
 # context.
-def start(update: Update, _: CallbackContext) -> None:xw
+def start(update: Update, _: CallbackContext) -> None:
     """Send a message when the command /start is issued."""
     user = update.effective_user
     update.message.reply_text(f'Hi {user.first_name} {user.last_name}!')

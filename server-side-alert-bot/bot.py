@@ -1,8 +1,7 @@
 import logging
 import time
-
 import requests
-from telegram import bot
+
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 # Enable logging
@@ -11,7 +10,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 
-token = "1743148790:AAFRTmxhYTU3ic5zzjF1hdjEIf4mC52nq1A"
+token = "[YOUR TOKEN HERE]"
 
 
 def error(update, context):
@@ -20,9 +19,8 @@ def error(update, context):
 
 
 def manual_poll(updater):
-    updater.bot.id
     while True:
-        r = requests.get("http://c66cbe964ea1.ngrok.io")
+        r = requests.get("http://afc5ce77f271.ngrok.io")
         if "Blue" in str(r.content):
             updater.bot.send_message(chat_id="29777902", text="It's blue!")
 
