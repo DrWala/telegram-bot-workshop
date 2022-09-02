@@ -48,7 +48,7 @@ class AttendanceSession:
 # we store it all in the program's runtime memory.
 CLASS_TO_STUDENTS = {
     "XII-A": {
-        "Azeem Vasanwala": "azeemvasanwala"
+        "YOUR_TELEGRAM_NAME": "YOUR_TELEGRAM_USERNAME"
     }
 }
 STUDENTS_TO_CLASS = {}
