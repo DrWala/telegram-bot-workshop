@@ -35,10 +35,10 @@ def main():
     updater = Updater(token, use_context=True)
 
     # Get the dispatcher to register handlers
-    dp = updater.dispatcher
+    dispatcher = updater.dispatcher
 
     # log all errors
-    dp.add_error_handler(error)
+    dispatcher.add_error_handler(error)
     manual_poll(updater)
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
